@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+ 
+ <hibernate-mapping>
+   <class name="Flights" table="flights"> 
+    <id name="id" column="id" type="int">
+   <generator class="increment"></generator>
+   </id>  
+   	<property name="flight_number" column="flight_number" type="string"></property>
+   	<property name="flight_name" column="flight_name" type="string"></property>
+   	<property name="start_source" column="start_source" type="string"></property>
+   	<property name="final_destination" column="final_destination" type="string"></property>
+   	<property name="date_of_travel" column="date_of_travel" type="date"></property>
+    <property name="seats_available" column="seats_available" type="int"></property>
+    <property name="ticket_price" column="ticket_price" type="int"></property>
+   </class>
+   
+   
+    <class name="booking" table="booking"> 
+    <id name="id" column="id" type="int">
+   <generator class="increment"></generator>
+   </id>  
+   	<property name="booking_ID" column="booking_ID" type="int"></property>
+   	<property name="flight_number" column="flight_number" type="string"></property>
+   	<property name="passenger_name" column="passenger_name" type="string"></property>
+   	<property name="passenger_age" column="passenger_age" type="int"></property>
+   	<property name="passenger_unique_id" column="passenger_unique_id" type="string"></property>
+    <property name="passenger_gender" column="passenger_gender" type="string"></property>
+    <property name="seat_number" column="seat_number" type="int"></property>
+    <property name="username" column="username" type="string"></property>
+    <property name="seq" column="seq" type="int"></property>
+   </class>
+ 
+ </hibernate-mapping>

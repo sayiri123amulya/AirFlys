@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1> WELCOME TO <font color=red>FLYAWAY</font> AIRLINE BOOKING SITE</h1><br><br>
+<h3>ENTER BELOW DETAILS TO GET THE AVAILABLE FLIGHTS</h3>
+<form name="booking" method="post" action="AirlinesPortalservlet">
+DATE OF TRAVEL	<input type="date" name="date_of_travel" placeholder="Date Of Travel" required><br>
+SOURCE			<input type="text" name="start_source" placeholder="Source" required><br>
+DESTINATION		<input type="text" name="final_destination" placeholder="Destination" required><br>
+NO OF PERSONS	<input type="Number" name="members" placeholder="Number Of Persons" required><br>
+				<button>SEARCH</button><br>
+</form>
+
+<br><br><br>
+<form name="fetch" method="post" action="fetchdetailservlet">
+<h3>ENTER BOOKING ID TO GET BOOKED TICKET DETAILS:</h3> <input name="Booking_id" placeholder="Booking ID">
+				<button>FETCH</button>
+</form>
+</body>
+</html>
